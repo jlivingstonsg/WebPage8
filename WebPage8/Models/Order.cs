@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace LexiconProject_ComputerWebShop.Models
+namespace WebPage8.Models
 {
     public class Order
     {
+        [Key]
         public int OrderId { get; set; }
         public DateTime OrderPlaced { get; set; }
         public DateTime OrderFullfilled { get; set; }

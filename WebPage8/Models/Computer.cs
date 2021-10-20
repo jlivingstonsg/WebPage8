@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace LexiconProject_ComputerWebShop.Models
+namespace WebPage8.Models
 {
     public class Computer
     {
+        [Key]
         public int ComputerId { get; set; }
         public string Name { get; set; }
         public double Price { get; set; }
