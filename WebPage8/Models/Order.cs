@@ -14,10 +14,8 @@ namespace WebPage8.Models
         public DateTime OrderPlaced { get; set; }
         public DateTime OrderFullfilled { get; set; }
         public int CustomerId { get; set; }        
-        //[JsonIgnore]
         public Customer Customer { get; set; }
-        //[JsonIgnore]
-        public ICollection<ComputerOrder> ComputerOrders { get; set; }        
+        public List<ComputerOrder> ComputerOrders { get; set; }        
         
     }
 }

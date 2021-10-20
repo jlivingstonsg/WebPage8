@@ -13,10 +13,8 @@ namespace WebPage8.Models
         public int ComputerOrderId { get; set; }
         public int Quantity { get; set; }
         public int ComputerId { get; set; }
-        public int OrderId { get; set; }
-        //[JsonIgnore]
         public Computer Computer { get; set; }
-        //[JsonIgnore]
+        public int OrderId { get; set; }      
         public Order Order { get; set; }
     }
 }

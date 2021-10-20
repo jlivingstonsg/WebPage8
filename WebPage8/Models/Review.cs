@@ -11,17 +11,12 @@ namespace WebPage8.Models
     public class Review
     {
         [Key]
-        public int ReviewId { get; set; }  
+        public int ReviewId { get; set; }
         public string Text { get; set; }
         public string Rating { get; set; }
-
-        //[JsonIgnore]
-        //[ForeignKey("ComputerId")]
-        public Computer ComputerId { get; set; }
+        public int ComputerId { get; set; }
         public Computer Computer { get; set; }
-
-        //[ForeignKey("CustomerId")]
-        public Customer CustomerId { get; set; }
+        public int CustomerId { get; set; }
         public Customer Customer { get; set; }         
     }
 }

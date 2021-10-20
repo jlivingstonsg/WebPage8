@@ -19,11 +19,7 @@ namespace WebPage8.Models
         public string Street { get; set; }
         public string City { get; set; }
         public string Country { get; set; }
-        //[JsonIgnore]
-        //public Address Address { get; set; }
-        //[JsonIgnore]
-        public ICollection<Order> Orders { get; set; }
-        //[JsonIgnore]
-        public ICollection<Review> Reviews { get; set; }
+        public List<Order> Orders { get; set; }
+        public List<Review> Reviews { get; set; }
     }
 }

@@ -8,6 +8,6 @@ namespace WebPage8.Models
         [Key]
         public int CategoryId { get; set; }
         public string Name { get; set; }
-        public ICollection<Computer> Computers { get; set; }
+        public List<Computer> Computers { get; set; }
     }
 }

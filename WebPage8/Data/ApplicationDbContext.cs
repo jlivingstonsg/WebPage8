@@ -17,7 +17,6 @@ namespace WebPage8.Data
         public DbSet<Computer> Computers { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Customer> Customers { get; set; }
-        //public DbSet<Address> Adresses { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<ComputerOrder> ComputerOrders { get; set; }
         public DbSet<Review> Reviews { get; set; }
