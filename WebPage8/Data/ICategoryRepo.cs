@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WebPage8.Data
 {
-    interface ICategoryRepo
+    public interface ICategoryRepo
     {
         public List<Category> Read();
     }

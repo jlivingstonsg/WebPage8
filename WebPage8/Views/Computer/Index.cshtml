@@ -1,6 +1,11 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model ComputerViewModel
 
+@foreach(var computer in Model.Computers)
+            {
+<div>
+    <h2>@computer.Name</h2>
+    <h3>@computer.Price</h3>
+    <h4>@computer.SystemType</h4>
+    <h4>@computer.Category.Name</h4>
+</div>
+            }

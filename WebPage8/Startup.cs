@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebPage8.Data;
+using WebPage8.Services;
 
 namespace WebPage8
 {
@@ -34,6 +35,12 @@ namespace WebPage8
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+            services.AddScoped<IComputerRepo, ComputerRepo>();
+            services.AddScoped<IComputerService, ComputerService>();
+
+            services.AddScoped<ICategoryRepo, CategoryRepo>();
+            services.AddScoped<ICategoryService, CategoryService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
