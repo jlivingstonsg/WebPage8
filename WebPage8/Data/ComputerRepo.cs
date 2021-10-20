@@ -28,6 +28,7 @@ namespace WebPage8.Data
         {
             return _applicationDbContext.Computers
                 .Include(c => c.Category)
+                .Include(r => r.Reviews)
                 .ToList();
         }
 
