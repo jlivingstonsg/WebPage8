@@ -11,9 +11,11 @@ namespace WebPage8.Services
     public class ComputerService : IComputerService
     {
         private readonly IComputerRepo _computerRepo;
-        public ComputerService(IComputerRepo computerRepo)
+        private readonly ICategoryRepo _categoryRepo;
+        public ComputerService(IComputerRepo computerRepo, ICategoryRepo categoryRepo)
         {
             _computerRepo = computerRepo;
+            _categoryRepo = categoryRepo;
         }
         public Computer Add(CreateComputerViewModel person)
         {
@@ -23,7 +25,8 @@ namespace WebPage8.Services
         public ComputerViewModel All()
         {
             ComputerViewModel computerViewModel = new ComputerViewModel {
-                Computers = _computerRepo.Read()
+                Computers = _computerRepo.Read(),
+                Categories = _categoryRepo.Read()
             };
 
             return computerViewModel;
@@ -36,7 +39,13 @@ namespace WebPage8.Services
 
         public ComputerViewModel FindBy(ComputerViewModel search)
         {
-            throw new NotImplementedException();
+            search.Computers = _computerRepo.Read()
+                .FindAll(
+                    computer => computer.Name .Contains(search.Search, System.StringComparison.OrdinalIgnoreCase) ||
+                                computer.Processor.Contains(search.Search, System.StringComparison.OrdinalIgnoreCase) ||
+                                computer.RAM.Contains(search.Search, System.StringComparison.OrdinalIgnoreCase)
+                    );
+            return search;
         }
 
         public Computer FindBy(int id)

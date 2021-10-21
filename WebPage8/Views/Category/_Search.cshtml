@@ -1,0 +1,17 @@
+﻿@model CategoryViewModel
+<form asp-controller="Category" asp-action="Index" method="post">
+    <div class="col-lg-12" @*style="margin-top:10px!important"*@>
+        <div class="d-flex justify-content-between">
+            <div class="input-group panel-body no-padding">
+                <input asp-for="@Model.Search" class=" form-control " type="text" placeholder="What are you looking for?">
+                <span class="input-group-btn">
+                    <input type="submit" class="btn btn-primary2 btn-lg p-sm" value="Sök" />
+                </span>
+            </div>
+        </div>
+    </div>
+</form>
+  
+
+
+

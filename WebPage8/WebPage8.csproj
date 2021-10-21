@@ -11,12 +11,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Views\Home\bck_OldIndex.cshtml" />
-    <None Include="Views\Home\Index.cshtml" />
-    <None Include="Views\Home\Privacy.cshtml" />
-    <None Include="Views\Home\_Items.cshtml" />
-    <None Include="Views\Home\_ProductList.cshtml" />
-    <None Include="Views\Home\_Search.cshtml" />
+    <None Include="Views\Category\bck_OldIndex.cshtml" />
+    <None Include="Views\Category\Privacy.cshtml" />
+    <None Include="Views\Category\_Items.cshtml" />
+    <None Include="Views\Category\_ProductList.cshtml" />
+    <None Include="Views\Category\_Search.cshtml" />
     <None Include="Views\Product\BrandItems.cshtml" />
     <None Include="Views\Product\Detail.cshtml" />
     <None Include="Views\Product\Index.cshtml" />

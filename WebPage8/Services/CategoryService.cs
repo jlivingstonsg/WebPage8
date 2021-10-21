@@ -22,7 +22,11 @@ namespace WebPage8.Services
 
         public CategoryViewModel All()
         {
-            throw new NotImplementedException(); ;
+            CategoryViewModel categoryViewModel = new CategoryViewModel
+            {
+                Categories = _categoryRepo.Read()
+            };
+            return categoryViewModel;
         }
 
         public Category Edit(int id, Category person)
@@ -32,7 +36,10 @@ namespace WebPage8.Services
 
         public CategoryViewModel FindBy(CategoryViewModel search)
         {
-            throw new NotImplementedException();
+            search.Categories = _categoryRepo.Read()
+                .FindAll(category =>
+                    category.Name.Contains(search.Search, System.StringComparison.OrdinalIgnoreCase));
+            return search;
         }
 
         public Category FindBy(int id)

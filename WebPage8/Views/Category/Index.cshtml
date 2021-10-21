@@ -1,0 +1,28 @@
+﻿@model CategoryViewModel
+@{
+    ViewBag.Title = "Computer Web Shop | Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section headerSection {
+    @Html.Partial("_LayoutHeader")
+}
+<section>
+    <partial name="_Search.cshtml" model="@Model" />
+</section>
+<section>
+    <partial name="_Carousel.cshtml" />
+</section>
+@*@Html.Partial("_PartialSearch")*@
+<section>
+    <div class="container sectionspc">
+        <div class="hpanel forum-box">
+            <div class="row product-container">
+                @foreach (Category category in Model.Categories)
+                {
+                    <partial name="_Items.cshtml" model="category" />
+                }
+            </div>
+        </div>
+    </div>
+</section>
