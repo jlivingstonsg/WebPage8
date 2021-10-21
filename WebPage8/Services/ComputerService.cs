@@ -41,7 +41,7 @@ namespace WebPage8.Services
 
         public Computer FindBy(int id)
         {
-            throw new NotImplementedException();
+            return _computerRepo.Read(id);
         }
 
         public bool Remove(int id)

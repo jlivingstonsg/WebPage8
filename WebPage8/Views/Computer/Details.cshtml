@@ -1,0 +1,12 @@
+﻿@model Computer
+<form asp-controller="Computer" asp-action="Details" method="post">
+    <h1>Enter Computer id:</h1>
+    <input asp-for="@Model.ComputerId" name="id" />
+    <input type="submit" value="send" />
+</form>
+<div>
+
+    <h1>@Model.Name</h1>
+    <h2>@Model.SystemType</h2>
+    <h3>@Model.Price</h3>
+</div>

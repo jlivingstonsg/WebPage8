@@ -35,6 +35,8 @@ namespace WebPage8.Data
         public Computer Read(int id)
         {
             return _applicationDbContext.Computers
+                .Include(c => c.Category)
+                .Include(r => r.Reviews)
                 .FirstOrDefault(c => c.ComputerId == id);
         }
 

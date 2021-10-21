@@ -19,5 +19,9 @@ namespace WebPage8.Controllers
         {
             return View(_computerService.All());
         }
+        public IActionResult Details(int id)
+        {
+            return View("Details",_computerService.FindBy(id));
+        }
     }
 }
