@@ -3,8 +3,8 @@
 <div class="col-lg-4 col-sm-6">
     <div class="hpanel">
         <div class="panel-body no-padding">
-            <div class="entry-thumbnail"> 
-                <img src="@Model.BrandUrl" class="img-responsive" alt=""> 
+            <div class="entry-thumbnail">
+                <img src="@Model.BrandUrl" class="img-responsive" alt="">
             </div>
             <div class="p-sm productdetail">
                 <h3>@Model.Name</h3>
@@ -13,9 +13,10 @@
                 <div class="btn btn-default btn-sm">
                     4.4 <i class="fa fa-star" aria-hidden="true"></i> (78)
                 </div>
-                <button type="button" onclick="@("window.location.href='" + @Url.Action("BrandItems", "Product") + "'");" class="btn btn-success btn-sm pull-right">Välja</button>
-            </div>
+                <div>
+                    <a asp-controller="Computer" asp-action="Details">Välja</a>
+                </div>
+                </div>
         </div>
     </div>
 </div>
-

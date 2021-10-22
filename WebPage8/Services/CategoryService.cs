@@ -42,6 +42,14 @@ namespace WebPage8.Services
             return search;
         }
 
+        //public CategoryViewModel FindByCategory(CategoryViewModel search)
+        //{
+        //    search.Categories = _categoryRepo.Read()
+        //        .FindAll(category =>
+        //            category.Name.Contains(search.Search, System.StringComparison.OrdinalIgnoreCase));
+        //    return search;
+        //}
+
         public Category FindBy(int id)
         {
             throw new NotImplementedException();

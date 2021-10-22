@@ -7,13 +7,8 @@
 @section headerSection {
     @Html.Partial("_LayoutHeader")
 }
-<section>
-    <partial name="_Search.cshtml" model="@Model" />
-</section>
-<section>
-    <partial name="_Carousel.cshtml" />
-</section>
-@*@Html.Partial("_PartialSearch")*@
+<partial name="_Search.cshtml" model="@Model" />
+<partial name="_Carousel.cshtml" />
 <section>
     <div class="container sectionspc">
         <div class="hpanel forum-box">

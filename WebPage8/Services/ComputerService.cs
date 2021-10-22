@@ -43,7 +43,8 @@ namespace WebPage8.Services
                 .FindAll(
                     computer => computer.Name .Contains(search.Search, System.StringComparison.OrdinalIgnoreCase) ||
                                 computer.Processor.Contains(search.Search, System.StringComparison.OrdinalIgnoreCase) ||
-                                computer.RAM.Contains(search.Search, System.StringComparison.OrdinalIgnoreCase)
+                                computer.RAM.Contains(search.Search, System.StringComparison.OrdinalIgnoreCase) ||
+                                computer.Category.Name.Contains(search.Search, System.StringComparison.OrdinalIgnoreCase) 
                     );
             return search;
         }
